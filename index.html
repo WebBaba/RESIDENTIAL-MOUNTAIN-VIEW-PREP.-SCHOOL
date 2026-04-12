@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RESIDENTIAL MOUNTAIN VIEW PREP. SCHOOL</title>
+  <meta name="description" content="RESIDENTIAL MOUNTAIN VIEW PREP. SCHOOL — Play to 10th, hostel, special entrance preparation, healthy environment." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --accent-yellow:#FFD700;
+      --accent-green:#B7D045;
+      --muted:#6b6b6b;
+      --card:#f8f9f7;
+      --max-width:1200px;
+      --radius:14px;
+      --shadow:0 10px 30px rgba(11,20,10,0.06);
+      --accent-text:#082006;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      background:var(--bg);
+      color:#111;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{max-width:var(--max-width); margin:0 auto; padding:28px}
+
+    /* HEADER */
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0}
+    .brand{display:flex; align-items:center; gap:14px}
+    .brand img{height:64px; width:64px; object-fit:cover; border-radius:10px; box-shadow:var(--shadow)}
+    .brand h1{margin:0; font-size:18px; letter-spacing:0.6px; text-transform:uppercase}
+    .brand p{margin:0; font-size:12px; color:var(--muted); text-transform:uppercase}
+
+    nav ul{display:flex; gap:16px; list-style:none; margin:0; padding:0}
+    nav a{text-decoration:none; color:#111; font-weight:700; padding:8px 12px; border-radius:10px; text-transform:uppercase}
+    nav a:hover{background:linear-gradient(90deg, rgba(183,208,69,0.12), rgba(255,215,0,0.06))}
+
+    /* HERO */
+    .hero{display:grid; grid-template-columns:1fr 480px; gap:24px; align-items:center; margin-top:18px}
+    .hero-card{background:linear-gradient(180deg, rgba(183,208,69,0.06), rgba(255,215,0,0.03)); padding:28px; border-radius:var(--radius); box-shadow:var(--shadow)}
+    .pill{display:inline-block; padding:8px 12px; border-radius:999px; background:linear-gradient(90deg,var(--accent-green),var(--accent-yellow)); color:var(--accent-text); font-weight:800; text-transform:uppercase; font-size:13px}
+    .hero-card h2{margin:12px 0 8px 0; font-size:28px; color:var(--accent-text); text-transform:uppercase}
+    .lead{margin:0 0 16px 0; color:var(--muted); font-weight:600; text-transform:uppercase}
+    .cta-row{display:flex; gap:12px; align-items:center}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:10px; border:0; cursor:pointer; font-weight:800; text-transform:uppercase}
+    .btn-primary{background:linear-gradient(90deg,var(--accent-green),var(--accent-yellow)); color:var(--accent-text); box-shadow:0 10px 30px rgba(183,208,69,0.18)}
+    .btn-outline{background:transparent; border:2px solid var(--accent-green); color:var(--accent-green)}
+    .hero-photo{border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); min-height:300px}
+    .hero-photo img{width:100%; height:100%; object-fit:cover; display:block}
+
+    /* SECTIONS */
+    section{margin-top:28px}
+    .grid{display:grid; gap:18px}
+    .two-col{grid-template-columns:1fr 1fr}
+    .card{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.04)}
+    h3{margin:0 0 10px 0; color:var(--accent-text); text-transform:uppercase}
+    p{margin:0 0 10px 0; color:var(--muted)}
+
+    /* FEATURES */
+    .features-list{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px}
+    .feature{display:flex; gap:12px; align-items:flex-start; background:white; padding:12px; border-radius:10px; border-left:5px solid var(--accent-green)}
+    .feature .num{font-weight:900; color:var(--accent-green); min-width:28px; text-align:center}
+
+    /* ACHIEVEMENTS */
+    .achievements ul{padding-left:18px; margin:0}
+    .achievements li{margin-bottom:8px; color:var(--muted); font-weight:700; text-transform:uppercase}
+
+    /* GALLERY */
+    .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .gallery .media{position:relative; overflow:hidden; border-radius:10px; cursor:pointer; box-shadow:var(--shadow)}
+    .gallery img, .gallery video{width:100%; height:200px; object-fit:cover; display:block; transition:transform .25s ease}
+    .gallery .media:hover img, .gallery .media:hover video{transform:scale(1.04)}
+    .media .label{position:absolute; left:10px; bottom:10px; background:rgba(0,0,0,0.5); color:#fff; padding:6px 8px; border-radius:6px; font-weight:700; text-transform:uppercase; font-size:12px}
+
+    /* CONTACT */
+    .contact-card{display:flex; flex-direction:column; gap:8px}
+    .contact-row{display:flex; gap:10px; align-items:center}
+    .contact-row strong{text-transform:uppercase}
+    .lead-contact{font-weight:800; color:var(--accent-text); text-transform:uppercase}
+
+    /* PASSPORT PHOTOS */
+    .leadership{display:flex; gap:12px; align-items:center}
+    .passport{width:96px; height:120px; object-fit:cover; border-radius:6px; box-shadow:var(--shadow); border:3px solid #fff}
+
+    /* MAP */
+    .map-card{border-radius:12px; overflow:hidden; box-shadow:var(--shadow); border:1px solid #eee}
+    .map-card iframe{width:100%; height:360px; border:0; display:block}
+
+    /* FOOTER */
+    footer{margin-top:36px; padding:18px 0; border-top:1px solid #eee; color:var(--muted); font-size:14px; display:flex; justify-content:space-between; align-items:center; gap:12px; text-transform:uppercase}
+
+    /* MODAL LIGHTBOX */
+    .modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.7); z-index:1200; padding:20px}
+    .modal.open{display:flex}
+    .modal-content{max-width:95%; max-height:90%; border-radius:10px; overflow:hidden; background:#000}
+    .modal-content img, .modal-content video{width:100%; height:100%; object-fit:contain; display:block}
+
+    /* ANIMATIONS */
+    .fade-up{opacity:0; transform:translateY(18px); transition:all .7s cubic-bezier(.2,.9,.3,1)}
+    .fade-in{opacity:0; transition:opacity .7s ease}
+    .in-view{opacity:1; transform:translateY(0)}
+    .pulse{animation:pulse 2.6s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(183,208,69,0.18)}70%{box-shadow:0 0 0 18px rgba(183,208,69,0)}100%{box-shadow:0 0 0 0 rgba(183,208,69,0)}}
+
+    /* RESPONSIVE */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .features-list{grid-template-columns:1fr}
+      .hero-photo{min-height:220px}
+    }
+    @media (max-width:560px){
+      nav ul{display:none}
+      .brand h1{font-size:15px}
+      .gallery img, .gallery video{height:140px}
+      .passport{width:72px; height:96px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="assets/logo.png" alt="SCHOOL LOGO" onerror="this.style.display='none'">
+        <div>
+          <h1>RESIDENTIAL MOUNTAIN VIEW PREP. SCHOOL</h1>
+          <p>NEAR CHAINPUR CHAURAHA, BHAGWANPUR, MUZAFFARPUR</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#features">FEATURES</a></li>
+          <li><a href="#achievements">ACHIEVEMENTS</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#map">MAP</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-card fade-up" data-animate>
+        <span class="pill pulse">PLAY TO 10TH • HOSTEL • SPECIAL PREP</span>
+        <h2>SHAPING CONFIDENT LEARNERS WITH ACADEMIC EXCELLENCE</h2>
+        <p class="lead">AIR CONDITIONED HOSTEL • 24×7 CCTV • HEALTHY DIET & WATER • TARGETED PREPARATION FOR R.K. MISSION, SAINIK, RIMC, NAVODAYA</p>
+
+        <div class="grid two-col" style="margin-top:16px">
+          <div class="card fade-in" data-animate>
+            <h3>QUICK FACTS</h3>
+            <p><strong>DIRECTOR:</strong> MR. AMIT KUMAR<br><strong>PRINCIPAL:</strong> MR. SONU SINGH</p>
+            <p><strong>CONTACT:</strong> +91-9608167076, +91-9771121551, +91-9334840372</p>
+          </div>
+          <div class="card fade-in" data-animate>
+            <h3>ADMISSIONS</h3>
+            <p>Admissions open for Play to Class 9th. Special Foundation Batch for JEE & NEET (CLASS 6–10). Day Care & Evening Classes Available.</p>
+            <div style="margin-top:10px">
+              <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">ENQUIRE NOW</button>
+              <button class="btn btn-outline" onclick="window.print()">DOWNLOAD BROCHURE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-photo fade-up" data-animate>
+        <img src="assets/hero.jpg" alt="SCHOOL HERO" onerror="this.style.background='#eee'; this.alt='HERO IMAGE MISSING'">
+      </div>
+    </div>
+
+    <!-- ABOUT & FEATURES -->
+    <section id="about" class="grid two-col">
+      <div class="card fade-up" data-animate>
+        <h3>ABOUT THE SCHOOL</h3>
+        <p>RESIDENTIAL MOUNTAIN VIEW PREP. SCHOOL provides a Healthy Educational Environment with a Focus on Academic Rigor, Physical Fitness, and Mental Preparedness.
+Hostel Facilities available with proper Air Conditioning, Nutritious Meals, and Round‑The‑Clock monitoring ensures Student Safety.</p>
+
+        <h3 style="margin-top:14px">SPECIAL PREPARATION</h3>
+        <p>Targeted programs for R.K. Mission, Sainik School, Military School, RIMC, Acharyakulam, CHS (BHU), Navodaya, Gurukul, Simultala, Vanasthali.</p>
+      </div>
+
+      <div class="card fade-up" data-animate id="features">
+        <h3>KEY FEATURES</h3>
+        <div class="features-list">
+          <div class="feature"><div class="num">1</div><div><strong>CLASSES</strong> FROM PLAY TO 10TH</div></div>
+          <div class="feature"><div class="num">2</div><div><strong>AIR CONDITIONED HOSTEL</strong> AVAILABLE</div></div>
+          <div class="feature"><div class="num">3</div><div><strong>WELL QUALIFIED TEACHERS</strong></div></div>
+          <div class="feature"><div class="num">4</div><div><strong>CCTV MONITORING</strong> 24×7</div></div>
+          <div class="feature"><div class="num">5</div><div><strong>HEALTHY EDUCATIONAL ENVIRONMENT</strong></div></div>
+          <div class="feature"><div class="num">6</div><div><strong>HEALTHY DIET & WATER</strong></div></div>
+          <div class="feature"><div class="num">7</div><div><strong>HOSTEL FACILITY</strong></div></div>
+          <div class="feature"><div class="num">8</div><div><strong>SPECIAL PREP</strong> FOR TOP RESIDENTIAL & DEFENCE SCHOOLS</div></div>
+          <div class="feature"><div class="num">9</div><div><strong>DAY CARE</strong> FACILITY</div></div>
+          <div class="feature"><div class="num">10</div><div><strong>EVENING / EXTRA CLASSES</strong></div></div>
+          <div class="feature"><div class="num">11</div><div><strong>FOUNDATION BATCH</strong> FOR JEE & NEET (6–10)</div></div>
+          <div class="feature"><div class="num">12</div><div><strong>HOLISTIC PREPAREDNESS</strong> EDUCATIONAL, PHYSICAL & MENTAL</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="card achievements fade-up" data-animate>
+      <h3>RECENT ACHIEVEMENTS</h3>
+      <ul>
+        <li><strong>5</strong> STUDENTS QUALIFIED IN R.K. MISSION DEOGHAR (2026–2027)</li>
+        <li><strong>85</strong> STUDENTS QUALIFIED IN AISSEE (2025–2026)</li>
+        <li><strong>6</strong> STUDENTS QUALIFIED IN R.K. MISSION DEOGHAR (2025–2026)</li>
+        <li><strong>4</strong> STUDENTS QUALIFIED IN NAVODAYA (2025–2026)</li>
+        <li><strong>3</strong> STUDENTS QUALIFIED IN ACHARYAKULAM (2025–2026)</li>
+        <li><strong>97</strong> STUDENTS QUALIFIED IN AISSEE (2024–2025)</li>
+        <li><strong>2</strong> STUDENTS QUALIFIED IN SIMULTALA (2025–2026)</li>
+      </ul>
+      <p class="muted" style="margin-top:10px">ACHIEVEMENT PHOTOS AND VIDEOS ARE DISPLAYED IN THE GALLERY BELOW.</p>
+    </section>
+
+    <!-- GALLERY (PHOTOS + ACHIEVEMENT PHOTOS + VIDEOS) -->
+    <section id="gallery" class="fade-up" data-animate>
+      <h3>GALLERY — PHOTOS & VIDEOS</h3>
+      <p class="muted">CLICK ANY ITEM TO ENLARGE. REPLACE PLACEHOLDERS IN <code>assets/</code> WITH REAL MEDIA.</p>
+
+      <div class="gallery" aria-label="School gallery">
+        <!-- ACHIEVEMENT PHOTOS -->
+        <div class="media" onclick="openModal('assets/achv1.jpg','ACHIEVEMENT PHOTO 1')">
+          <img src="assets/achv1.jpg" alt="Achievement 1" onerror="this.style.background='#eee'">
+          <div class="label">ACHIEVEMENT PHOTO</div>
+        </div>
+
+        <div class="media" onclick="openModal('assets/achv2.jpg','ACHIEVEMENT PHOTO 2')">
+          <img src="assets/achv2.jpg" alt="Achievement 2" onerror="this.style.background='#eee'">
+          <div class="label">ACHIEVEMENT PHOTO</div>
+        </div>
+
+        <div class="media" onclick="openModal('assets/achv3.jpg','ACHIEVEMENT PHOTO 3')">
+          <img src="assets/achv3.jpg" alt="Achievement 3" onerror="this.style.background='#eee'">
+          <div class="label">ACHIEVEMENT PHOTO</div>
+        </div>
+
+        <!-- SCHOOL PHOTOS -->
+        <div class="media" onclick="openModal('assets/school1.jpg','SCHOOL CAMPUS')">
+          <img src="assets/school1.jpg" alt="School campus" onerror="this.style.background='#eee'">
+          <div class="label">CAMPUS</div>
+        </div>
+
+        <div class="media" onclick="openModal('assets/students1.jpg','STUDENTS IN CLASS')">
+          <img src="assets/students1.png" alt="Students" onerror="this.style.background='#eee'">
+          <div class="label">STUDENTS</div>
+        </div>
+
+        <div class="media" onclick="openModal('assets/event1.jpg','SCHOOL EVENT')">
+          <img src="assets/event1.jpg" alt="Event" onerror="this.style.background='#eee'">
+          <div class="label">EVENT</div>
+        </div>
+
+            </div>
+    </section>
+
+    <!-- MAP -->
+    <section id="map" style="margin-top:22px">
+      <h3>VISIT US — LOCATION</h3>
+      <p class="muted">NEAR CHAINPUR CHAURAHA, INSIDE BHAMASHAH DWAR, BHAGWANPUR, MUZAFFARPUR, BIHAR - 842001</p>
+      <div class="map-card fade-up" data-animate>
+        <!-- USER PROVIDED IFRAME -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.22883708025!2d85.3450761757027!3d26.124080677126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed17321fee179f%3A0x57cbf11a63338a28!2sResidential%20Mountain%20View%20Prep.%20School%2C%20Muzaffarpur!5e0!3m2!1sen!2sin!4v1776000249057!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- CONTACT & LEADERSHIP -->
+    <section id="contact" class="grid two-col" style="margin-bottom:8px">
+      <div class="card contact-card fade-up" data-animate>
+        <h3>CONTACT & VISIT</h3>
+        <p><strong>ADDRESS:</strong> NEAR CHAINPUR CHAURAHA, INSIDE BHAMASHAH DWAR, BHAGWANPUR, MUZAFFARPUR, BIHAR - 842001</p>
+        <div class="contact-row"><strong>PHONE:</strong><div class="muted">+91-9608167076, +91-9771121551, +91-9334840372</div></div>
+        <p class="muted">OFFICE HOURS: MONDAY–SATURDAY, 9:00 AM – 5:00 PM</p>
+
+        <h3 style="margin-top:12px">LEADERSHIP</h3>
+        <div class="leadership">
+          <div style="text-align:center">
+            <img src="assets/director.jpg" alt="Director Passport Photo" class="passport" onerror="this.style.display='none'">
+            <div style="margin-top:8px; font-weight:800; text-transform:uppercase">MR. AMIT KUMAR</div>
+            <div class="muted">DIRECTOR</div>
+          </div>
+
+          <div style="text-align:center">
+            <img src="assets/principal.jpg" alt="Principal Passport Photo" class="passport" onerror="this.style.display='none'">
+            <div style="margin-top:8px; font-weight:800; text-transform:uppercase">MR. SONU SINGH</div>
+            <div class="muted">PRINCIPAL</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card fade-up" data-animate>
+        <h3>ENQUIRY FORM</h3>
+        <p class="muted">FILL BASIC DETAILS AND WE WILL CONTACT YOU.</p>
+        <form onsubmit="event.preventDefault(); alert('THANK YOU! WE WILL CONTACT YOU SHORTLY.');">
+          <div style="display:flex; gap:8px; margin-bottom:8px">
+            <input required placeholder="FULL NAME" style="flex:1; padding:10px; border-radius:8px; border:1px solid #e6e6e6; text-transform:uppercase">
+            <input required placeholder="PHONE NUMBER" style="flex:1; padding:10px; border-radius:8px; border:1px solid #e6e6e6">
+          </div>
+          <input placeholder="EMAIL (OPTIONAL)" style="width:100%; padding:10px; border-radius:8px; border:1px solid #e6e6e6; margin-bottom:8px">
+          <textarea placeholder="MESSAGE" style="width:100%; padding:10px; border-radius:8px; border:1px solid #e6e6e6; min-height:90px"></textarea>
+          <div style="margin-top:10px; display:flex; gap:8px">
+            <button class="btn btn-primary" type="submit">SUBMIT ENQUIRY</button>
+            <button class="btn btn-outline" type="button" onclick="window.location.href='tel:+919608167076'">CALL NOW</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <strong>RESIDENTIAL MOUNTAIN VIEW PREP. SCHOOL</strong> — ALL RIGHTS RESERVED</div>
+      <div class="muted">DESIGNED WITH CARE • <span style="color:var(--accent-green); font-weight:800">HEALTHY EDUCATION</span></div>
+    </footer>
+  </div>
+
+  <!-- MODAL LIGHTBOX -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" onclick="closeModal(event)">
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+
+  <script>
+    // Simple animation on scroll
+    const observers = document.querySelectorAll('[data-animate]');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          entry.target.style.opacity = 1;
+          entry.target.classList.remove('fade-up');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12});
+    observers.forEach(el => io.observe(el));
+
+    // Lightbox for images and videos
+    function openModal(src, alt){
+      const modal = document.getElementById('modal');
+      const content = document.getElementById('modal-content');
+      content.innerHTML = '<img src="'+src+'" alt="'+(alt||'Image')+'">';
+      modal.classList.add('open');
+    }
+    function openModalVideo(src, alt){
+      const modal = document.getElementById('modal');
+      const content = document.getElementById('modal-content');
+      content.innerHTML = '<video src="'+src+'" controls autoplay style="width:100%; height:100%;"></video>';
+      modal.classList.add('open');
+    }
+    function closeModal(e){
+      if(e.target.id === 'modal' || e.target.id === 'modal-content'){
+        const modal = document.getElementById('modal');
+        modal.classList.remove('open');
+        document.getElementById('modal-content').innerHTML = '';
+      }
+    }
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){
+        document.getElementById('modal').classList.remove('open');
+        document.getElementById('modal-content').innerHTML = '';
+      }
+    });
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+</body>
+</html>
